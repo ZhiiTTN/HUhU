@@ -104,3 +104,6 @@ func decompressFile(filename string, output string) error {
 	}
 	return nil
 }
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Compile|Any CPU = Compile|Any CPU
