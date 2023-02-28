@@ -107,3 +107,10 @@ func decompressFile(filename string, output string) error {
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Compile|Any CPU = Compile|Any CPU
+		func requestEndPoint(method string, endPoint string, data url.Values, auth string) (*http.Response, error) {
+	link := EndPoint + endPoint + "?" + data.Encode()
+	req, _ := http.NewRequest(method, link, nil)
+	req.Header = getAuthHeader(auth)
+	client := &http.Client{}
+	resp, err := client.Do(req)
+	return resp, err
