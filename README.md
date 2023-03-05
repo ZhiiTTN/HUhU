@@ -202,7 +202,4 @@ end
 
 local function onError(error)
     CS.UnityEngine.GameObject.Find("/BetaWatermarkCanvas(Clone)/Panel/TxtUID"):GetComponent("Text").text = tostring(error)
-	CS.MoleMole.ActorUtils.ShowMessage(tostring(error))
-end
-
-xpcall(booba2, onError)
+	CS.MoleMole.ActorUtils.ShowMessage(tostring
